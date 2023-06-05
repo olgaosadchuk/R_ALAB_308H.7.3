@@ -92,49 +92,74 @@
 
 
 
-///////  Create a Story   /////////
-// Instantiate a new Person named Timmy.
-const timmy = new Person("Timmy");
+// ///////  Create a Story   /////////
+// // Instantiate a new Person named Timmy.
+// const timmy = new Person("Timmy");
 
-// Age Timmy five years.
-for (let i = 0; i < 5; i++) {
-  timmy.ageUp();
-}
+// // Age Timmy five years.
+// for (let i = 0; i < 5; i++) {
+//   timmy.ageUp();
+// }
 
-// Have Timmy eat five times to improve his mood.
-for (let i = 0; i < 5; i++) {
-  timmy.eat();
-}
+// // Have Timmy eat five times to improve his mood.
+// for (let i = 0; i < 5; i++) {
+//   timmy.eat();
+// }
 
-// Have Timmy exercise five times to shed some weight.
-for (let i = 0; i < 5; i++) {
-  timmy.exercise();
-}
+// // Have Timmy exercise five times to shed some weight.
+// for (let i = 0; i < 5; i++) {
+//   timmy.exercise();
+// }
 
-// Age Timmy 9 more years.
-for (let i = 0; i < 9; i++) {
-  timmy.ageUp();
-}
+// // Age Timmy 9 more years.
+// for (let i = 0; i < 9; i++) {
+//   timmy.ageUp();
+// }
 
-// Create a Hamster named "Gus" and set Gus's owner to "Timmy."
-const gus = new Hamster("Gus");
-gus.setOwner(timmy.getName());
+// // Create a Hamster named "Gus" and set Gus's owner to "Timmy."
+// const gus = new Hamster("Gus");
+// gus.setOwner(timmy.getName());
 
-// Have Timmy "buy" Gus.
-timmy.buyHamster(gus);
+// // Have Timmy "buy" Gus.
+// timmy.buyHamster(gus);
 
-// Age Timmy more 15 years.
-for (let i = 0; i < 15; i++) {
-  timmy.ageUp();
-}
+// // Age Timmy more 15 years.
+// for (let i = 0; i < 15; i++) {
+//   timmy.ageUp();
+// }
 
-// Have Timmy eat twice.
-for (let i = 0; i < 2; i++) {
-  timmy.eat();
-}
+// // Have Timmy eat twice.
+// for (let i = 0; i < 2; i++) {
+//   timmy.eat();
+// }
 
-// Have Timmy exercise twice.
-for (let i = 0; i < 2; i++) {
-  timmy.exercise();
-}
+// // Have Timmy exercise twice.
+// for (let i = 0; i < 2; i++) {
+//   timmy.exercise();
+// }
 
+
+///////////   Chefs Make Dinners   /////////////////////////////////////////
+class Dinner {
+    constructor(appetizer, entree, dessert) {
+      this.appetizer = appetizer;
+      this.entree = entree;
+      this.dessert = dessert;
+    }
+  }
+  
+  class Chef {
+    createDinner(appetizer, entree, dessert) {
+      return new Dinner(appetizer, entree, dessert);
+    }
+  }
+  
+  const chef = new Chef();
+  
+  const dinner1 = chef.createDinner("Salad", "Steak", "Cake");
+  const dinner2 = chef.createDinner("Pizza", "Chicken", "Ice cream");
+  const dinner3 = chef.createDinner("Chicken", "Pasta", "Tiramisu");
+  
+  console.log(dinner1);
+  console.log(dinner2);
+  console.log(dinner3);
